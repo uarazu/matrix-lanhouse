@@ -1,0 +1,37 @@
+<%= form_for(@slider) do |f| %>
+  <% if @slider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@slider.errors.count, "error") %> prohibited this slider from being saved:</h2>
+
+      <ul>
+      <% @slider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description_1 %><br>
+    <%= f.text_field :description_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :description_2 %><br>
+    <%= f.text_field :description_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :description_3 %><br>
+    <%= f.text_field :description_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :description_4 %><br>
+    <%= f.text_field :description_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :description_5 %><br>
+    <%= f.text_field :description_5 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

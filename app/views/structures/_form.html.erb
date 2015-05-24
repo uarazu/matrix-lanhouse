@@ -1,0 +1,33 @@
+<%= form_for(@structure) do |f| %>
+  <% if @structure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@structure.errors.count, "error") %> prohibited this structure from being saved:</h2>
+
+      <ul>
+      <% @structure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :left_title %><br>
+    <%= f.text_field :left_title %>
+  </div>
+  <div class="field">
+    <%= f.label :center_title %><br>
+    <%= f.text_field :center_title %>
+  </div>
+  <div class="field">
+    <%= f.label :center_description %><br>
+    <%= f.text_field :center_description %>
+  </div>
+  <div class="field">
+    <%= f.label :right_title %><br>
+    <%= f.text_field :right_title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
